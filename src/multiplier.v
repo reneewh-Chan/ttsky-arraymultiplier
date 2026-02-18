@@ -1,5 +1,5 @@
-module multiplier(clk, reset, A, B, prod);
-    input clk, reset;
+module multiplier(clk /*, reset*/, A, B, prod);
+    input clk /*, reset*/;
     input [7:0] A, B;
     output reg [15:0] prod;
 
@@ -7,8 +7,9 @@ module multiplier(clk, reset, A, B, prod);
     reg [7:0] multiplier;
     reg [3:0] count;
 
-    always @(posedge clk or negedge reset)
+    always @(posedge clk /*, negedge reset */)
     begin
+        /*
         if (!reset)
         begin
             prod <= 16'b0;
@@ -16,6 +17,7 @@ module multiplier(clk, reset, A, B, prod);
             multiplier <= 8'b0;
             count <= 4'b0;
         end
+        */
         else
         begin
             if (count == 0)
