@@ -1,0 +1,381 @@
+=== Command: Select-String -Path "simulation_results/sim_2026-02-20T22-02-41-836Z/eda_results.json" -Pattern "(TEST PASSED|Total errors)" | Select-Object -Last 2 (2026-02-20T22:02:50.899Z) ===
+Exit Code: 0
+Output:
+
+simulation_results\sim_2026-02-20T22-02-41-836Z\eda_results.json:3:  "stdout": "INFO: [EDA] eda: version 0.3.10\nINFO: 
+[EDA] main: eda sim --no-color --tool verilator --seed=1 --verilate-args=-Wno-fatal --waves tt_um_test; (run from 
+/app/eda.work/c7e7e43f-77d8-4716-b698-b8a9f7a9db22.edacmd)\nINFO: [EDA] eda_config: 
+--config-yml=eda_config_defaults.yml observed\nINFO: [EDA] eda_config: using config: 
+/app/venv/lib/python3.12/site-packages/opencos/eda_config_defaults.yml\nINFO: [EDA] *** OpenCOS EDA ***\nINFO: [EDA] 
+Detected verilator (/usr/local/bin/verilator)\nINFO: [EDA] sim: top-most target name: tt_um_test\nINFO: [EDA] exec: 
+/usr/local/bin/verilator --binary -Wno-CASEINCOMPLETE -Wno-REALCVT -Wno-SELRANGE -Wno-TIMESCALEMOD -Wno-UNSIGNED 
+-Wno-WIDTH -Wno-fatal --timing --assert --autoflush -sv -CFLAGS -O1 -j 7 --trace-structs --trace-params --trace-fst 
+-top tb_tt_um_arraymultiplier -o sim.exe +define+SIMULATION 
+/app/eda.work/c7e7e43f-77d8-4716-b698-b8a9f7a9db22.edacmd/3-to-1 multiplexer.v 
+/app/eda.work/c7e7e43f-77d8-4716-b698-b8a9f7a9db22.edacmd/multiplier.v 
+/app/eda.work/c7e7e43f-77d8-4716-b698-b8a9f7a9db22.edacmd/multiplier_matrix.v 
+/app/eda.work/c7e7e43f-77d8-4716-b698-b8a9f7a9db22.edacmd/input.v 
+/app/eda.work/c7e7e43f-77d8-4716-b698-b8a9f7a9db22.edacmd/output.v 
+/app/eda.work/c7e7e43f-77d8-4716-b698-b8a9f7a9db22.edacmd/tt_um_arraymultiplier.v 
+/app/eda.work/c7e7e43f-77d8-4716-b698-b8a9f7a9db22.edacmd/tb_tt_um_arraymultiplier.sv (in eda.work/tt_um_test.sim, 
+tee_fpath='compile.log')\nINFO: [EDA] PID 8009 for /usr/local/bin/verilator\nmake: Entering directory 
+'/app/eda.work/c7e7e43f-77d8-4716-b698-b8a9f7a9db22.edacmd/eda.work/tt_um_test.sim/obj_dir'\nccache g++ -Os  -I.  -MMD 
+-I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 
+-DVM_TIMING=1 -DVM_TRACE=1 -DVM_TRACE_FST=1 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -faligned-new -fcf-protection=none 
+-Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized 
+-Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O1 
+-DVL_TIME_CONTEXT   -fcoroutines -c -o verilated.o /usr/local/share/verilator/include/verilated.cpp\nccache g++ -Os  
+-I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 
+-DVM_TIMING=1 -DVM_TRACE=1 -DVM_TRACE_FST=1 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -faligned-new -fcf-protection=none 
+-Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized 
+-Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O1 
+-DVL_TIME_CONTEXT   -fcoroutines -c -o verilated_fst_c.o 
+/usr/local/share/verilator/include/verilated_fst_c.cpp\nccache g++ -Os  -I.  -MMD -I/usr/local/share/verilator/include 
+-I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=1 -DVM_TRACE_FST=1 
+-DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow 
+-Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter 
+-Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O1 -DVL_TIME_CONTEXT   -fcoroutines -c -o 
+verilated_timing.o /usr/local/share/verilator/include/verilated_timing.cpp\nccache g++ -Os  -I.  -MMD 
+-I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 
+-DVM_TIMING=1 -DVM_TRACE=1 -DVM_TRACE_FST=1 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -faligned-new -fcf-protection=none 
+-Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized 
+-Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O1 
+-DVL_TIME_CONTEXT   -fcoroutines -c -o verilated_threads.o 
+/usr/local/share/verilator/include/verilated_threads.cpp\nccache g++ -Os  -I.  -MMD 
+-I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 
+-DVM_TIMING=1 -DVM_TRACE=1 -DVM_TRACE_FST=1 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -faligned-new -fcf-protection=none 
+-Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized 
+-Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O1 
+-DVL_TIME_CONTEXT   -fcoroutines -x c++-header Vtb_tt_um_arraymultiplier__pch.h -o 
+Vtb_tt_um_arraymultiplier__pch.h.fast.gch\nccache g++   -I.  -MMD -I/usr/local/share/verilator/include 
+-I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=1 -DVM_TRACE_FST=1 
+-DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow 
+-Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter 
+-Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O1 -DVL_TIME_CONTEXT   -fcoroutines -x 
+c++-header Vtb_tt_um_arraymultiplier__pch.h -o Vtb_tt_um_arraymultiplier__pch.h.slow.gch\necho \"\" > 
+Vtb_tt_um_arraymultiplier__ALL.verilator_deplist.tmp\nccache g++   -I.  -MMD -I/usr/local/share/verilator/include 
+-I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=1 -DVM_TRACE_FST=1 
+-DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow 
+-Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter 
+-Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O1 -DVL_TIME_CONTEXT   -fcoroutines 
+-include Vtb_tt_um_arraymultiplier__pch.h.slow -c -o Vtb_tt_um_arraymultiplier__ConstPool_0.o 
+Vtb_tt_um_arraymultiplier__ConstPool_0.cpp\nccache g++   -I.  -MMD -I/usr/local/share/verilator/include 
+-I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=1 -DVM_TRACE_FST=1 
+-DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow 
+-Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter 
+-Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O1 -DVL_TIME_CONTEXT   -fcoroutines 
+-include Vtb_tt_um_arraymultiplier__pch.h.slow -c -o Vtb_tt_um_arraymultiplier___024root__Slow.o 
+Vtb_tt_um_arraymultiplier___024root__Slow.cpp\nccache g++   -I.  -MMD -I/usr/local/share/verilator/include 
+-I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=1 -DVM_TRACE_FST=1 
+-DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow 
+-Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter 
+-Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O1 -DVL_TIME_CONTEXT   -fcoroutines 
+-include Vtb_tt_um_arraymultiplier__pch.h.slow -c -o Vtb_tt_um_arraymultiplier___024root__DepSet_hbc35bb06__0__Slow.o 
+Vtb_tt_um_arraymultiplier___024root__DepSet_hbc35bb06__0__Slow.cpp\nccache g++   -I.  -MMD 
+-I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 
+-DVM_TIMING=1 -DVM_TRACE=1 -DVM_TRACE_FST=1 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -faligned-new -fcf-protection=none 
+-Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized 
+-Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O1 
+-DVL_TIME_CONTEXT   -fcoroutines -include Vtb_tt_um_arraymultiplier__pch.h.slow -c -o 
+Vtb_tt_um_arraymultiplier___024root__DepSet_h580a5130__0__Slow.o 
+Vtb_tt_um_arraymultiplier___024root__DepSet_h580a5130__0__Slow.cpp\nccache g++   -I.  -MMD 
+-I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 
+-DVM_TIMING=1 -DVM_TRACE=1 -DVM_TRACE_FST=1 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -faligned-new -fcf-protection=none 
+-Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized 
+-Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O1 
+-DVL_TIME_CONTEXT   -fcoroutines -include Vtb_tt_um_arraymultiplier__pch.h.slow -c -o 
+Vtb_tt_um_arraymultiplier__Syms.o Vtb_tt_um_arraymultiplier__Syms.cpp\nccache g++   -I.  -MMD 
+-I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 
+-DVM_TIMING=1 -DVM_TRACE=1 -DVM_TRACE_FST=1 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -faligned-new -fcf-protection=none 
+-Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized 
+-Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O1 
+-DVL_TIME_CONTEXT   -fcoroutines -include Vtb_tt_um_arraymultiplier__pch.h.slow -c -o 
+Vtb_tt_um_arraymultiplier__Trace__0__Slow.o Vtb_tt_um_arraymultiplier__Trace__0__Slow.cpp\nccache g++   -I.  -MMD 
+-I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 
+-DVM_TIMING=1 -DVM_TRACE=1 -DVM_TRACE_FST=1 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -faligned-new -fcf-protection=none 
+-Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized 
+-Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O1 
+-DVL_TIME_CONTEXT   -fcoroutines -include Vtb_tt_um_arraymultiplier__pch.h.slow -c -o 
+Vtb_tt_um_arraymultiplier__TraceDecls__0__Slow.o Vtb_tt_um_arraymultiplier__TraceDecls__0__Slow.cpp\nccache g++ -Os  
+-I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 
+-DVM_TIMING=1 -DVM_TRACE=1 -DVM_TRACE_FST=1 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -faligned-new -fcf-protection=none 
+-Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized 
+-Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O1 
+-DVL_TIME_CONTEXT   -fcoroutines -include Vtb_tt_um_arraymultiplier__pch.h.fast -c -o Vtb_tt_um_arraymultiplier.o 
+Vtb_tt_um_arraymultiplier.cpp\nccache g++ -Os  -I.  -MMD -I/usr/local/share/verilator/include 
+-I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=1 -DVM_TRACE_FST=1 
+-DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow 
+-Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter 
+-Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O1 -DVL_TIME_CONTEXT   -fcoroutines 
+-include Vtb_tt_um_arraymultiplier__pch.h.fast -c -o Vtb_tt_um_arraymultiplier___024root__DepSet_hbc35bb06__0.o 
+Vtb_tt_um_arraymultiplier___024root__DepSet_hbc35bb06__0.cpp\nccache g++ -Os  -I.  -MMD 
+-I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 
+-DVM_TIMING=1 -DVM_TRACE=1 -DVM_TRACE_FST=1 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -faligned-new -fcf-protection=none 
+-Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized 
+-Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O1 
+-DVL_TIME_CONTEXT   -fcoroutines -include Vtb_tt_um_arraymultiplier__pch.h.fast -c -o 
+Vtb_tt_um_arraymultiplier___024root__DepSet_h580a5130__0.o 
+Vtb_tt_um_arraymultiplier___024root__DepSet_h580a5130__0.cpp\nccache g++ -Os  -I.  -MMD 
+-I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 
+-DVM_TIMING=1 -DVM_TRACE=1 -DVM_TRACE_FST=1 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -faligned-new -fcf-protection=none 
+-Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized 
+-Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O1 
+-DVL_TIME_CONTEXT   -fcoroutines -include Vtb_tt_um_arraymultiplier__pch.h.fast -c -o 
+Vtb_tt_um_arraymultiplier___024root__DepSet_h580a5130__1.o 
+Vtb_tt_um_arraymultiplier___024root__DepSet_h580a5130__1.cpp\nccache g++ -Os  -I.  -MMD 
+-I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 
+-DVM_TIMING=1 -DVM_TRACE=1 -DVM_TRACE_FST=1 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -faligned-new -fcf-protection=none 
+-Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized 
+-Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O1 
+-DVL_TIME_CONTEXT   -fcoroutines -include Vtb_tt_um_arraymultiplier__pch.h.fast -c -o 
+Vtb_tt_um_arraymultiplier__main.o Vtb_tt_um_arraymultiplier__main.cpp\nccache g++ -Os  -I.  -MMD 
+-I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 
+-DVM_TIMING=1 -DVM_TRACE=1 -DVM_TRACE_FST=1 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -faligned-new -fcf-protection=none 
+-Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized 
+-Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -O1 
+-DVL_TIME_CONTEXT   -fcoroutines -include Vtb_tt_um_arraymultiplier__pch.h.fast -c -o 
+Vtb_tt_um_arraymultiplier__Trace__0.o Vtb_tt_um_arraymultiplier__Trace__0.cpp\ng++    verilated.o verilated_fst_c.o 
+verilated_timing.o verilated_threads.o Vtb_tt_um_arraymultiplier__ALL.a   -lz  -pthread -lpthread -latomic   -o 
+sim.exe\nrm Vtb_tt_um_arraymultiplier__ALL.verilator_deplist.tmp\nmake: Leaving directory 
+'/app/eda.work/c7e7e43f-77d8-4716-b698-b8a9f7a9db22.edacmd/eda.work/tt_um_test.sim/obj_dir'\n- V e r i l a t i o n   R 
+e p o r t: Verilator 5.038 2025-07-08 rev v5.038\n- Verilator: Built from 0.165 MB sources in 8 modules, into 1.082 MB 
+in 13 C++ files needing 0.000 MB\n- Verilator: Walltime 9.339 s (elab=0.002, cvt=0.070, bld=9.249); cpu 0.106 s on 7 
+threads; alloced 67.016 MB\nINFO: [EDA] subprocess_run_background: wrote: 
+/app/eda.work/c7e7e43f-77d8-4716-b698-b8a9f7a9db22.edacmd/eda.work/tt_um_test.sim/compile.log\nINFO: [EDA] Tool - 
+verilator, total counts: 0 tool warnings, 0 tool errors\nINFO: [EDA] exec: ./obj_dir/sim.exe +trace +verilator+seed+1 
+(in eda.work/tt_um_test.sim, tee_fpath='sim.log')\nINFO: [EDA] PID 8139 for ./obj_dir/sim.exe\nTEST START\nLOG: 0 : 
+INFO : tb_tt_um_arraymultiplier : Applying reset\nLOG: 40000 : INFO : tb_tt_um_arraymultiplier : dut.state : 
+expected_value: INPUT(0) actual_value: 0\n\n========================================\nLOG: 40000 : INFO : 
+tb_tt_um_arraymultiplier : TEST 1: Normal operation\n========================================\nLOG: 40000 : INFO : 
+tb_tt_um_arraymultiplier : Sending matrix A data\nLOG: 45000 : INFO : tb_tt_um_arraymultiplier : ui_in : 
+expected_value: A[0]=1 actual_value: 1\nLOG: 55000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: A[1]=2 
+actual_value: 2\nLOG: 65000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: A[2]=3 actual_value: 3\nLOG: 
+75000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: A[3]=4 actual_value: 4\nLOG: 85000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[4]=5 actual_value: 5\nLOG: 95000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[5]=6 actual_value: 6\nLOG: 105000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[6]=7 actual_value: 7\nLOG: 115000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[7]=8 actual_value: 8\nLOG: 125000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[8]=9 actual_value: 9\nLOG: 126000 : INFO : 
+tb_tt_um_arraymultiplier : Sending matrix B data\nLOG: 135000 : INFO : tb_tt_um_arraymultiplier : ui_in : 
+expected_value: B[0]=9 actual_value: 9\nLOG: 145000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: B[1]=8 
+actual_value: 8\nLOG: 155000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: B[2]=7 actual_value: 7\nLOG: 
+165000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: B[3]=6 actual_value: 6\nLOG: 175000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: B[4]=5 actual_value: 5\nLOG: 185000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: B[5]=4 actual_value: 4\nLOG: 195000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: B[6]=3 actual_value: 3\nLOG: 205000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: B[7]=2 actual_value: 2\nLOG: 215000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: B[8]=1 actual_value: 1\nLOG: 235000 : INFO : 
+tb_tt_um_arraymultiplier : dut.state : expected_value: 1 actual_value: 1\nLOG: 275000 : INFO : 
+tb_tt_um_arraymultiplier : dut.state : expected_value: 2 actual_value: 2\nLOG: 775000 : INFO : 
+tb_tt_um_arraymultiplier : Applying reset\nLOG: 815000 : INFO : tb_tt_um_arraymultiplier : dut.state : expected_value: 
+INPUT(0) actual_value: 0\n\n========================================\nLOG: 815000 : INFO : tb_tt_um_arraymultiplier : 
+TEST 2: Zero matrices\n========================================\nLOG: 815000 : INFO : tb_tt_um_arraymultiplier : 
+Sending matrix A data\nLOG: 825000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: A[0]=0 actual_value: 
+0\nLOG: 835000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: A[1]=0 actual_value: 0\nLOG: 845000 : INFO 
+: tb_tt_um_arraymultiplier : ui_in : expected_value: A[2]=0 actual_value: 0\nLOG: 855000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[3]=0 actual_value: 0\nLOG: 865000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[4]=0 actual_value: 0\nLOG: 875000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[5]=0 actual_value: 0\nLOG: 885000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[6]=0 actual_value: 0\nLOG: 895000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[7]=0 actual_value: 0\nLOG: 905000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[8]=0 actual_value: 0\nLOG: 906000 : INFO : 
+tb_tt_um_arraymultiplier : Sending matrix B data\nLOG: 915000 : INFO : tb_tt_um_arraymultiplier : ui_in : 
+expected_value: B[0]=0 actual_value: 0\nLOG: 925000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: B[1]=0 
+actual_value: 0\nLOG: 935000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: B[2]=0 actual_value: 0\nLOG: 
+945000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: B[3]=0 actual_value: 0\nLOG: 955000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: B[4]=0 actual_value: 0\nLOG: 965000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: B[5]=0 actual_value: 0\nLOG: 975000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: B[6]=0 actual_value: 0\nLOG: 985000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: B[7]=0 actual_value: 0\nLOG: 995000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: B[8]=0 actual_value: 0\nLOG: 1015000 : INFO : 
+tb_tt_um_arraymultiplier : dut.state : expected_value: 1 actual_value: 1\nLOG: 1055000 : INFO : 
+tb_tt_um_arraymultiplier : dut.state : expected_value: 2 actual_value: 2\nLOG: 1555000 : INFO : 
+tb_tt_um_arraymultiplier : Applying reset\nLOG: 1595000 : INFO : tb_tt_um_arraymultiplier : dut.state : 
+expected_value: INPUT(0) actual_value: 0\n\n========================================\nLOG: 1595000 : INFO : 
+tb_tt_um_arraymultiplier : TEST 3: Maximum values (0xFF)\n========================================\nLOG: 1595000 : 
+INFO : tb_tt_um_arraymultiplier : Sending matrix A data\nLOG: 1605000 : INFO : tb_tt_um_arraymultiplier : ui_in : 
+expected_value: A[0]=255 actual_value: 255\nLOG: 1615000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: 
+A[1]=255 actual_value: 255\nLOG: 1625000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: A[2]=255 
+actual_value: 255\nLOG: 1635000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: A[3]=255 actual_value: 
+255\nLOG: 1645000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: A[4]=255 actual_value: 255\nLOG: 1655000 
+: INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: A[5]=255 actual_value: 255\nLOG: 1665000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[6]=255 actual_value: 255\nLOG: 1675000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[7]=255 actual_value: 255\nLOG: 1685000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[8]=255 actual_value: 255\nLOG: 1686000 : INFO : 
+tb_tt_um_arraymultiplier : Sending matrix B data\nLOG: 1695000 : INFO : tb_tt_um_arraymultiplier : ui_in : 
+expected_value: B[0]=255 actual_value: 255\nLOG: 1705000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: 
+B[1]=255 actual_value: 255\nLOG: 1715000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: B[2]=255 
+actual_value: 255\nLOG: 1725000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: B[3]=255 actual_value: 
+255\nLOG: 1735000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: B[4]=255 actual_value: 255\nLOG: 1745000 
+: INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: B[5]=255 actual_value: 255\nLOG: 1755000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: B[6]=255 actual_value: 255\nLOG: 1765000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: B[7]=255 actual_value: 255\nLOG: 1775000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: B[8]=255 actual_value: 255\nLOG: 1795000 : INFO : 
+tb_tt_um_arraymultiplier : dut.state : expected_value: 1 actual_value: 1\nLOG: 1835000 : INFO : 
+tb_tt_um_arraymultiplier : dut.state : expected_value: 2 actual_value: 2\nLOG: 2335000 : INFO : 
+tb_tt_um_arraymultiplier : Applying reset\nLOG: 2375000 : INFO : tb_tt_um_arraymultiplier : dut.state : 
+expected_value: INPUT(0) actual_value: 0\n\n========================================\nLOG: 2375000 : INFO : 
+tb_tt_um_arraymultiplier : TEST 4: Identity-like matrix\n========================================\nLOG: 2375000 : INFO 
+: tb_tt_um_arraymultiplier : Sending matrix A data\nLOG: 2385000 : INFO : tb_tt_um_arraymultiplier : ui_in : 
+expected_value: A[0]=1 actual_value: 1\nLOG: 2395000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: 
+A[1]=0 actual_value: 0\nLOG: 2405000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: A[2]=0 actual_value: 
+0\nLOG: 2415000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: A[3]=0 actual_value: 0\nLOG: 2425000 : 
+INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: A[4]=1 actual_value: 1\nLOG: 2435000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[5]=0 actual_value: 0\nLOG: 2445000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[6]=0 actual_value: 0\nLOG: 2455000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[7]=0 actual_value: 0\nLOG: 2465000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[8]=1 actual_value: 1\nLOG: 2466000 : INFO : 
+tb_tt_um_arraymultiplier : Sending matrix B data\nLOG: 2475000 : INFO : tb_tt_um_arraymultiplier : ui_in : 
+expected_value: B[0]=5 actual_value: 5\nLOG: 2485000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: 
+B[1]=6 actual_value: 6\nLOG: 2495000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: B[2]=7 actual_value: 
+7\nLOG: 2505000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: B[3]=8 actual_value: 8\nLOG: 2515000 : 
+INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: B[4]=9 actual_value: 9\nLOG: 2525000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: B[5]=10 actual_value: 10\nLOG: 2535000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: B[6]=11 actual_value: 11\nLOG: 2545000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: B[7]=12 actual_value: 12\nLOG: 2555000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: B[8]=13 actual_value: 13\nLOG: 2575000 : INFO : 
+tb_tt_um_arraymultiplier : dut.state : expected_value: 1 actual_value: 1\nLOG: 2615000 : INFO : 
+tb_tt_um_arraymultiplier : dut.state : expected_value: 2 actual_value: 2\nLOG: 3115000 : INFO : 
+tb_tt_um_arraymultiplier : Applying reset\nLOG: 3155000 : INFO : tb_tt_um_arraymultiplier : dut.state : 
+expected_value: INPUT(0) actual_value: 0\n\n========================================\nLOG: 3155000 : INFO : 
+tb_tt_um_arraymultiplier : TEST 5: Single non-zero element\n========================================\nLOG: 3155000 : 
+INFO : tb_tt_um_arraymultiplier : Sending matrix A data\nLOG: 3165000 : INFO : tb_tt_um_arraymultiplier : ui_in : 
+expected_value: A[0]=0 actual_value: 0\nLOG: 3175000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: 
+A[1]=0 actual_value: 0\nLOG: 3185000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: A[2]=0 actual_value: 
+0\nLOG: 3195000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: A[3]=0 actual_value: 0\nLOG: 3205000 : 
+INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: A[4]=100 actual_value: 100\nLOG: 3215000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[5]=0 actual_value: 0\nLOG: 3225000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[6]=0 actual_value: 0\nLOG: 3235000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[7]=0 actual_value: 0\nLOG: 3245000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[8]=0 actual_value: 0\nLOG: 3246000 : INFO : 
+tb_tt_um_arraymultiplier : Sending matrix B data\nLOG: 3255000 : INFO : tb_tt_um_arraymultiplier : ui_in : 
+expected_value: B[0]=0 actual_value: 0\nLOG: 3265000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: 
+B[1]=0 actual_value: 0\nLOG: 3275000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: B[2]=0 actual_value: 
+0\nLOG: 3285000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: B[3]=0 actual_value: 0\nLOG: 3295000 : 
+INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: B[4]=50 actual_value: 50\nLOG: 3305000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: B[5]=0 actual_value: 0\nLOG: 3315000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: B[6]=0 actual_value: 0\nLOG: 3325000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: B[7]=0 actual_value: 0\nLOG: 3335000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: B[8]=0 actual_value: 0\nLOG: 3355000 : INFO : 
+tb_tt_um_arraymultiplier : dut.state : expected_value: 1 actual_value: 1\nLOG: 3395000 : INFO : 
+tb_tt_um_arraymultiplier : dut.state : expected_value: 2 actual_value: 2\nLOG: 3895000 : INFO : 
+tb_tt_um_arraymultiplier : Applying reset\nLOG: 3935000 : INFO : tb_tt_um_arraymultiplier : dut.state : 
+expected_value: INPUT(0) actual_value: 0\n\n========================================\nLOG: 3935000 : INFO : 
+tb_tt_um_arraymultiplier : TEST 6: Alternating pattern\n========================================\nLOG: 3935000 : INFO 
+: tb_tt_um_arraymultiplier : Sending matrix A data\nLOG: 3945000 : INFO : tb_tt_um_arraymultiplier : ui_in : 
+expected_value: A[0]=0 actual_value: 0\nLOG: 3955000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: 
+A[1]=255 actual_value: 255\nLOG: 3965000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: A[2]=0 
+actual_value: 0\nLOG: 3975000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: A[3]=255 actual_value: 
+255\nLOG: 3985000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: A[4]=0 actual_value: 0\nLOG: 3995000 : 
+INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: A[5]=255 actual_value: 255\nLOG: 4005000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[6]=0 actual_value: 0\nLOG: 4015000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[7]=255 actual_value: 255\nLOG: 4025000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[8]=0 actual_value: 0\nLOG: 4026000 : INFO : 
+tb_tt_um_arraymultiplier : Sending matrix B data\nLOG: 4035000 : INFO : tb_tt_um_arraymultiplier : ui_in : 
+expected_value: B[0]=255 actual_value: 255\nLOG: 4045000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: 
+B[1]=0 actual_value: 0\nLOG: 4055000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: B[2]=255 
+actual_value: 255\nLOG: 4065000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: B[3]=0 actual_value: 
+0\nLOG: 4075000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: B[4]=255 actual_value: 255\nLOG: 4085000 : 
+INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: B[5]=0 actual_value: 0\nLOG: 4095000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: B[6]=255 actual_value: 255\nLOG: 4105000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: B[7]=0 actual_value: 0\nLOG: 4115000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: B[8]=255 actual_value: 255\nLOG: 4135000 : INFO : 
+tb_tt_um_arraymultiplier : dut.state : expected_value: 1 actual_value: 1\nLOG: 4175000 : INFO : 
+tb_tt_um_arraymultiplier : dut.state : expected_value: 2 actual_value: 2\nLOG: 4675000 : INFO : 
+tb_tt_um_arraymultiplier : Applying reset\nLOG: 4715000 : INFO : tb_tt_um_arraymultiplier : dut.state : 
+expected_value: INPUT(0) actual_value: 0\n\n========================================\nLOG: 4715000 : INFO : 
+tb_tt_um_arraymultiplier : TEST 7: Powers of 2\n========================================\nLOG: 4715000 : INFO : 
+tb_tt_um_arraymultiplier : Sending matrix A data\nLOG: 4725000 : INFO : tb_tt_um_arraymultiplier : ui_in : 
+expected_value: A[0]=1 actual_value: 1\nLOG: 4735000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: 
+A[1]=2 actual_value: 2\nLOG: 4745000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: A[2]=4 actual_value: 
+4\nLOG: 4755000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: A[3]=8 actual_value: 8\nLOG: 4765000 : 
+INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: A[4]=16 actual_value: 16\nLOG: 4775000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[5]=32 actual_value: 32\nLOG: 4785000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[6]=64 actual_value: 64\nLOG: 4795000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[7]=128 actual_value: 128\nLOG: 4805000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[8]=1 actual_value: 1\nLOG: 4806000 : INFO : 
+tb_tt_um_arraymultiplier : Sending matrix B data\nLOG: 4815000 : INFO : tb_tt_um_arraymultiplier : ui_in : 
+expected_value: B[0]=128 actual_value: 128\nLOG: 4825000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: 
+B[1]=64 actual_value: 64\nLOG: 4835000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: B[2]=32 
+actual_value: 32\nLOG: 4845000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: B[3]=16 actual_value: 
+16\nLOG: 4855000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: B[4]=8 actual_value: 8\nLOG: 4865000 : 
+INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: B[5]=4 actual_value: 4\nLOG: 4875000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: B[6]=2 actual_value: 2\nLOG: 4885000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: B[7]=1 actual_value: 1\nLOG: 4895000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: B[8]=128 actual_value: 128\nLOG: 4915000 : INFO : 
+tb_tt_um_arraymultiplier : dut.state : expected_value: 1 actual_value: 1\nLOG: 4955000 : INFO : 
+tb_tt_um_arraymultiplier : dut.state : expected_value: 2 actual_value: 2\nLOG: 5455000 : INFO : 
+tb_tt_um_arraymultiplier : Applying reset\nLOG: 5495000 : INFO : tb_tt_um_arraymultiplier : dut.state : 
+expected_value: INPUT(0) actual_value: 0\n\n========================================\nLOG: 5495000 : INFO : 
+tb_tt_um_arraymultiplier : TEST 8: Reset during INPUT state\n========================================\nLOG: 5546000 : 
+INFO : tb_tt_um_arraymultiplier : Applying reset during INPUT\nLOG: 5586000 : INFO : tb_tt_um_arraymultiplier : 
+dut.state : expected_value: INPUT(0) actual_value: 0\nLOG: 5685000 : INFO : tb_tt_um_arraymultiplier : Applying 
+reset\nLOG: 5725000 : INFO : tb_tt_um_arraymultiplier : dut.state : expected_value: INPUT(0) actual_value: 
+0\n\n========================================\nLOG: 5725000 : INFO : tb_tt_um_arraymultiplier : TEST 9: data_valid 
+always low\n========================================\nLOG: 5906000 : INFO : tb_tt_um_arraymultiplier : dut.state : 
+expected_value: INPUT(0) actual_value: 0 (correctly stayed in INPUT)\nLOG: 5906000 : INFO : tb_tt_um_arraymultiplier : 
+Applying reset\nLOG: 5946000 : INFO : tb_tt_um_arraymultiplier : dut.state : expected_value: INPUT(0) actual_value: 
+0\n\n========================================\nLOG: 5946000 : INFO : tb_tt_um_arraymultiplier : TEST 10: Extra data 
+after done\n========================================\nLOG: 5946000 : INFO : tb_tt_um_arraymultiplier : Sending matrix 
+A data\nLOG: 5955000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: A[0]=1 actual_value: 1\nLOG: 5965000 
+: INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: A[1]=2 actual_value: 2\nLOG: 5975000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[2]=3 actual_value: 3\nLOG: 5985000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[3]=4 actual_value: 4\nLOG: 5995000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[4]=5 actual_value: 5\nLOG: 6005000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[5]=6 actual_value: 6\nLOG: 6015000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[6]=7 actual_value: 7\nLOG: 6025000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[7]=8 actual_value: 8\nLOG: 6035000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[8]=9 actual_value: 9\nLOG: 6036000 : INFO : 
+tb_tt_um_arraymultiplier : Sending matrix B data\nLOG: 6045000 : INFO : tb_tt_um_arraymultiplier : ui_in : 
+expected_value: B[0]=9 actual_value: 9\nLOG: 6055000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: 
+B[1]=8 actual_value: 8\nLOG: 6065000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: B[2]=7 actual_value: 
+7\nLOG: 6075000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: B[3]=6 actual_value: 6\nLOG: 6085000 : 
+INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: B[4]=5 actual_value: 5\nLOG: 6095000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: B[5]=4 actual_value: 4\nLOG: 6105000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: B[6]=3 actual_value: 3\nLOG: 6115000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: B[7]=2 actual_value: 2\nLOG: 6125000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: B[8]=1 actual_value: 1\nLOG: 6145000 : INFO : 
+tb_tt_um_arraymultiplier : dut.state : expected_value: 1 actual_value: 1\nLOG: 6145000 : INFO : 
+tb_tt_um_arraymultiplier : Attempting to send extra data\nLOG: 6196000 : INFO : tb_tt_um_arraymultiplier : dut.state : 
+expected_value: 2 actual_value: 2\nLOG: 6695000 : INFO : tb_tt_um_arraymultiplier : Applying reset\nLOG: 6735000 : 
+INFO : tb_tt_um_arraymultiplier : dut.state : expected_value: INPUT(0) actual_value: 
+0\n\n========================================\nLOG: 6735000 : INFO : tb_tt_um_arraymultiplier : TEST 11: data_valid 
+glitches\n========================================\nLOG: 6735000 : INFO : tb_tt_um_arraymultiplier : Sending matrix A 
+data\nLOG: 6745000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: A[0]=1 actual_value: 1\nLOG: 6755000 : 
+INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: A[1]=2 actual_value: 2\nLOG: 6765000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[2]=3 actual_value: 3\nLOG: 6779000 : INFO : 
+tb_tt_um_arraymultiplier : Injected data_valid glitch at A[3]\nLOG: 6779000 : INFO : tb_tt_um_arraymultiplier : ui_in 
+: expected_value: A[3]=4 actual_value: 4\nLOG: 6785000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: 
+A[4]=5 actual_value: 5\nLOG: 6795000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: A[5]=6 actual_value: 
+6\nLOG: 6805000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: A[6]=7 actual_value: 7\nLOG: 6815000 : 
+INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: A[7]=8 actual_value: 8\nLOG: 6825000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: A[8]=9 actual_value: 9\nLOG: 6826000 : INFO : 
+tb_tt_um_arraymultiplier : Sending matrix B data\nLOG: 6835000 : INFO : tb_tt_um_arraymultiplier : ui_in : 
+expected_value: B[0]=9 actual_value: 9\nLOG: 6845000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: 
+B[1]=8 actual_value: 8\nLOG: 6855000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: B[2]=7 actual_value: 
+7\nLOG: 6865000 : INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: B[3]=6 actual_value: 6\nLOG: 6875000 : 
+INFO : tb_tt_um_arraymultiplier : ui_in : expected_value: B[4]=5 actual_value: 5\nLOG: 6885000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: B[5]=4 actual_value: 4\nLOG: 6895000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: B[6]=3 actual_value: 3\nLOG: 6905000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: B[7]=2 actual_value: 2\nLOG: 6915000 : INFO : 
+tb_tt_um_arraymultiplier : ui_in : expected_value: B[8]=1 actual_value: 1\nLOG: 6935000 : INFO : 
+tb_tt_um_arraymultiplier : dut.state : expected_value: 1 actual_value: 1\nLOG: 6975000 : INFO : 
+tb_tt_um_arraymultiplier : dut.state : expected_value: 2 actual_value: 2\nLOG: 7475000 : INFO : 
+tb_tt_um_arraymultiplier : Applying reset\nLOG: 7515000 : INFO : tb_tt_um_arraymultiplier : dut.state : 
+expected_value: INPUT(0) actual_value: 0\n\n========================================\nLOG: 7515000 : INFO : 
+tb_tt_um_arraymultiplier : TEST 12: Reset at different clock phases\n========================================\nLOG: 
+7550000 : INFO : tb_tt_um_arraymultiplier : dut.state : expected_value: INPUT(0) actual_value: 
+0\n\n========================================\nLOG: 7745000 : INFO : tb_tt_um_arraymultiplier : Test 
+Summary\n========================================\nTotal tests run: 12\nTotal errors: 0\nTEST PASSED\n- 
+/app/eda.work/c7e7e43f-77d8-4716-b698-b8a9f7a9db22.edacmd/tb_tt_um_arraymultiplier.sv:487: Verilog $finish\n- S i m u 
+l a t i o n   R e p o r t: Verilator 5.038 2025-07-08\n- Verilator: $finish at 8us; walltime 0.023 s; speed 331.998 
+us/s\n- Verilator: cpu 0.023 s on 1 threads; alloced 203 MB\nINFO: [EDA] subprocess_run_background: wrote: 
+/app/eda.work/c7e7e43f-77d8-4716-b698-b8a9f7a9db22.edacmd/eda.work/tt_um_test.sim/sim.log\nINFO: [EDA] Tool - 
+verilator, total counts: 0 tool warnings, 0 tool errors\nINFO: [EDA] sim - verilator - tb_tt_um_arraymultiplier: No 
+errors observed.\nINFO: [EDA] Closing logfile: eda.work/eda.log\nINFO: [EDA] Wrote artifacts JSON: 
+eda.work/tt_um_test.sim/artifacts.json\nINFO: [EDA] Exiting with 0 warnings, 0 errors\n",
+
+
+
+=== End Output ===
+

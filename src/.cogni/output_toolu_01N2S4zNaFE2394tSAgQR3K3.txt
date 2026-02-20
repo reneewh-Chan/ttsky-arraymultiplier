@@ -1,0 +1,46 @@
+=== Command: Get-Content "simulation_results/sim_2026-02-20T22-01-16-596Z/eda_results.json" | Select-String "%Error" | Select-Object -First 5 (2026-02-20T22:01:33.339Z) ===
+Exit Code: 0
+Output:
+
+  "stdout": "INFO: [EDA] eda: version 0.3.10\nINFO: [EDA] main: eda sim --no-color --tool verilator --seed=1 
+--verilate-args=-Wno-fatal --waves tt_um_test; (run from 
+/app/eda.work/1bd0810d-5a1f-496f-8a1f-2e48a2a8cfcc.edacmd)\nINFO: [EDA] eda_config: 
+--config-yml=eda_config_defaults.yml observed\nINFO: [EDA] eda_config: using config: 
+/app/venv/lib/python3.12/site-packages/opencos/eda_config_defaults.yml\nINFO: [EDA] *** OpenCOS EDA ***\nINFO: [EDA] 
+Detected verilator (/usr/local/bin/verilator)\nINFO: [EDA] sim: top-most target name: tt_um_test\nINFO: [EDA] exec: 
+/usr/local/bin/verilator --binary -Wno-CASEINCOMPLETE -Wno-REALCVT -Wno-SELRANGE -Wno-TIMESCALEMOD -Wno-UNSIGNED 
+-Wno-WIDTH -Wno-fatal --timing --assert --autoflush -sv -CFLAGS -O1 -j 7 --trace-structs --trace-params --trace-fst 
+-top tb_tt_um_arraymultiplier -o sim.exe +define+SIMULATION 
+/app/eda.work/1bd0810d-5a1f-496f-8a1f-2e48a2a8cfcc.edacmd/3-to-1 multiplexer.v 
+/app/eda.work/1bd0810d-5a1f-496f-8a1f-2e48a2a8cfcc.edacmd/multiplier.v 
+/app/eda.work/1bd0810d-5a1f-496f-8a1f-2e48a2a8cfcc.edacmd/multiplier_matrix.v 
+/app/eda.work/1bd0810d-5a1f-496f-8a1f-2e48a2a8cfcc.edacmd/input.v 
+/app/eda.work/1bd0810d-5a1f-496f-8a1f-2e48a2a8cfcc.edacmd/output.v 
+/app/eda.work/1bd0810d-5a1f-496f-8a1f-2e48a2a8cfcc.edacmd/tt_um_arraymultiplier.v 
+/app/eda.work/1bd0810d-5a1f-496f-8a1f-2e48a2a8cfcc.edacmd/tb_tt_um_arraymultiplier.sv (in eda.work/tt_um_test.sim, 
+tee_fpath='compile.log')\nINFO: [EDA] PID 8127 for /usr/local/bin/verilator\n%Error: 
+/app/eda.work/1bd0810d-5a1f-496f-8a1f-2e48a2a8cfcc.edacmd/tt_um_arraymultiplier.v:60:5: Instance of module must be 
+named\n   60 |     input_module(clk, rst_n, ui_in, input_en, data_valid, input_done, A, B);\n      |     
+^~~~~~~~~~~~\n        ... See the manual at https://verilator.org/verilator_doc.html?v=5.038 for more 
+assistance.\n%Error: /app/eda.work/1bd0810d-5a1f-496f-8a1f-2e48a2a8cfcc.edacmd/tt_um_arraymultiplier.v:61:5: Instance 
+of module must be named\n   61 |     matrix_mult (clk, rst_n, calc_en, A, B, C, calc_done);\n      |     
+^~~~~~~~~~~\n%Error: /app/eda.work/1bd0810d-5a1f-496f-8a1f-2e48a2a8cfcc.edacmd/tt_um_arraymultiplier.v:62:5: Instance 
+of module must be named\n   62 |     output_module (clk, rst_n, output_en, C, out_data, out_valid, output_done);\n     
+ |     ^~~~~~~~~~~~~\n%Error: /app/eda.work/1bd0810d-5a1f-496f-8a1f-2e48a2a8cfcc.edacmd/tt_um_arraymultiplier.v:62:46: 
+Signal definition not found, and implicit disabled with `default_nettype: 'out_data'\n   62 |     output_module (clk, 
+rst_n, output_en, C, out_data, out_valid, output_done);\n      |                                              
+^~~~~~~~\n%Error: /app/eda.work/1bd0810d-5a1f-496f-8a1f-2e48a2a8cfcc.edacmd/tt_um_arraymultiplier.v:62:56: Signal 
+definition not found, and implicit disabled with `default_nettype: 'out_valid'\n                                       
+                                                        : ... Suggested alternative: 'data_valid'\n   62 |     
+output_module (clk, rst_n, output_en, C, out_data, out_valid, output_done);\n      |                                   
+                     ^~~~~~~~~\n%Error: Exiting due to 5 error(s)\nINFO: [EDA] subprocess_run_background: wrote: 
+/app/eda.work/1bd0810d-5a1f-496f-8a1f-2e48a2a8cfcc.edacmd/eda.work/tt_um_test.sim/compile.log\nINFO: [EDA] exec: 
+returned with error (return code: 1)\nINFO: [EDA] Tool - verilator, total counts: 0 tool warnings, 6 tool 
+errors\nERROR: [EDA] sim - verilator - tb_tt_um_arraymultiplier: exec returned with error code: 1\nINFO: [EDA] Wrote 
+artifacts JSON: eda.work/tt_um_test.sim/artifacts.json\nINFO: [EDA] Exiting with 0 warnings, 1 errors\nINFO: [EDA] 
+Closing logfile: eda.work/eda.log\n",
+
+
+
+=== End Output ===
+

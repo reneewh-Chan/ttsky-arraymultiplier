@@ -166,11 +166,11 @@ module tb_matrix_mult;
             // Start computation
             @(posedge clock);
             enable = 1'b1;
-            @(posedge clock);
-            enable = 1'b0;
             
             // Wait for completion
             wait_for_done(20);
+            
+            enable = 1'b0;
             
             // Verify results
             verify_results();
@@ -340,13 +340,12 @@ module tb_matrix_mult;
         
         @(posedge clock);
         enable = 1'b1;
-        @(posedge clock);
-        enable = 1'b0;
         
         // Wait 2 cycles then reset
         repeat(2) @(posedge clock);
         $display("LOG: %0t : INFO : tb_matrix_mult : Applying reset mid-computation", $time);
         reset = 1'b0;
+        enable = 1'b0;
         #20;
         reset = 1'b1;
         #20;
@@ -380,9 +379,8 @@ module tb_matrix_mult;
         
         @(posedge clock);
         enable = 1'b1;
-        @(posedge clock);
-        enable = 1'b0;
         wait_for_done(20);
+        enable = 1'b0;
         verify_results();
         
         // Immediately start second computation
@@ -392,9 +390,8 @@ module tb_matrix_mult;
         
         @(posedge clock);
         enable = 1'b1;
-        @(posedge clock);
-        enable = 1'b0;
         wait_for_done(20);
+        enable = 1'b0;
         verify_results();
         
         repeat(5) @(posedge clock);

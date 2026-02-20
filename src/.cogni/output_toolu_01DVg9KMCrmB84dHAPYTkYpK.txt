@@ -1,0 +1,13 @@
+=== Command: cd "simulation_results/sim_2026-02-20T21-47-04-197Z" && grep -E "(TEST PASSED|TEST FAILED|Total tests|Total errors|ERROR)" eda_results.json | tail -20 (2026-02-20T21:49:52.537Z) ===
+Exit Code: 1
+Output:
+At line:1 char:54
++ cd "simulation_results/sim_2026-02-20T21-47-04-197Z" && grep -E "(TES ...
++                                                      ~~
+The token '&&' is not a valid statement separator in this version.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : InvalidEndOfLine
+ 
+
+=== End Output ===
+

@@ -49,8 +49,11 @@ assign output_en = (state == OUTPUT);
 
 wire [7:0] A [0:8];               
 wire [7:0] B [0:8]; 
-wire [17:0] C [0:8];    
+wire [17:0] C [0:8];
+wire [7:0] out_data;
+wire out_valid;
 
+<<<<<<< Updated upstream
     input_module i(clk, rst_n, ui_in, input_en, data_valid, input_done, A, B);
     matrix_mult m(clk, rst_n, calc_en, A, B, C, calc_done);
     output_module o(clk, rst_n, output_en, C, out_data, out_valid, output_done);
@@ -58,6 +61,41 @@ wire [17:0] C [0:8];
 assign uo_out = out_data;
 assign uio_out[0] = out_valid;
 assign uio_out[7:1] = 7'b0;
+=======
+assign uo_out = out_data;
+
+input_module u_input (
+    .clk(clk),
+    .reset(rst_n),
+    .data_in(ui_in),
+    .enable(input_en),
+    .data_valid(data_valid),
+    .done(input_done),
+    .A(A),
+    .B(B)
+);
+
+matrix_mult u_matrix_mult (
+    .clk(clk),
+    .reset(rst_n),
+    .enable(calc_en),
+    .A(A),
+    .B(B),
+    .C(C),
+    .done(calc_done)
+);
+
+output_module u_output (
+    .clk(clk),
+    .reset(rst_n),
+    .enable(output_en),
+    .C(C),
+    .out_data(out_data),
+    .out_valid(out_valid),
+    .done(output_done)
+);
+
+>>>>>>> Stashed changes
 
 assign uio_oe = 8'b1;
     wire _unused = &{ena, uio_in[7:1], 1'b0};

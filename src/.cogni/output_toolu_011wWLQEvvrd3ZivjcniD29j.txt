@@ -1,0 +1,6 @@
+=== Command: Add-Content -Path "DEPS.yml" -Value "`ntt_um_test:`n  deps:`n    - 3-to-1 multiplexer.v`n    - multiplier.v`n    - multiplier_matrix.v`n    - input.v`n    - output.v`n    - tt_um_arraymultiplier.v`n    - tb_tt_um_arraymultiplier.sv`n  top: tb_tt_um_arraymultiplier" (2026-02-20T22:00:29.670Z) ===
+Exit Code: 0
+Output:
+
+=== End Output ===
+

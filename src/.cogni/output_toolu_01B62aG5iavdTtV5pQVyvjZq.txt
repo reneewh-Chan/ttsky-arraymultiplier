@@ -1,0 +1,16 @@
+=== Command: Select-String -Path "simulation_results/sim-2026-02-20T22-01-16-596Z/eda_results.json" -Pattern "%Error" | Select-Object -First 3 (2026-02-20T22:01:26.907Z) ===
+Exit Code: 1
+Output:
+Select-String : Cannot find path 'C:\Renee\U of T\ASIC 
+Hackathon\ttsky-arraymultiplier\src\simulation_results\sim-2026-02-20T22-01-16-596Z\eda_results.json' because it does 
+not exist.
+At line:1 char:1
++ Select-String -Path "simulation_results/sim-2026-02-20T22-01-16-596Z/ ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Renee\U of T...da_results.json:String) [Select-String], ItemNotFound 
+   Exception
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SelectStringCommand
+ 
+
+=== End Output ===
+

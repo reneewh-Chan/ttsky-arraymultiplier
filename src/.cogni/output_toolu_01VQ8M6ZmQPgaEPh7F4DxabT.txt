@@ -1,0 +1,6 @@
+=== Command: Select-String -Path "simulation_results/sim_2026-02-20T21-55-27-738Z/eda_results.json" -Pattern "(TEST PASSED|Total errors: 0)" | Select-Object -Last 3 (2026-02-20T21:55:36.142Z) ===
+Exit Code: 0
+Output:
+
+=== End Output ===
+
