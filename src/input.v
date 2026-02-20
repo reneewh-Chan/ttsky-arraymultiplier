@@ -14,8 +14,8 @@ module input_buffer (
             count <= 0;
             done <= 0;
         end else if (data_valid && !done) begin
-            stored_data[cnt] <= data_in;
-            if (cnt == 17) begin
+            stored_data[count] <= data_in;
+            if (count == 17) begin
                 done <= 1'b1;
                 count <= count;
             end else begin
@@ -25,3 +25,4 @@ module input_buffer (
     end
 
 endmodule
+
