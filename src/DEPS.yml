@@ -9,3 +9,11 @@ adder_test:
     - nBit_Adder.v
     - tb_nBit_Adder.sv
   top: tb_nBit_Adder
+
+matrix_mult_test:
+  deps:
+    - 3-to-1 multiplexer.v
+    - multiplier.v
+    - multiplier_matrix.v
+    - tb_matrix_mult.sv
+  top: tb_matrix_mult
