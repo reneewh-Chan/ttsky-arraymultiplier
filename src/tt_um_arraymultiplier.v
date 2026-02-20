@@ -16,12 +16,6 @@ module tt_um_arraymultiplier (
     input  wire       rst_n     // reset_n - low to reset
 );
 
-// All output pins must be assigned. If not used, assign to 0.
-assign uio_out = 0;
-assign uio_oe  = 0;
-// List all unused inputs to prevent warnings
-    wire _unused = &{ena, 1'b0};
-
 parameter INPUT = 2'd0, COMPUTE = 2'd1, OUTPUT = 2'd2, DONE = 2'd3;
 reg [1:0] state, next_state;
 wire input_en, calc_en, output_en;
@@ -57,9 +51,14 @@ wire [7:0] A [0:8];
 wire [7:0] B [0:8]; 
 wire [17:0] C [0:8];    
 
-    input_module(clk, rst_n, ui_in, input_en, data_valid, input_done, A, B);
-    matrix_mult (clk, rst_n, calc_en, A, B, C, calc_done);
-    output_module (clk, rst_n, output_en, C, out_data, out_valid, output_done);
+    input_module i(clk, rst_n, ui_in, input_en, data_valid, input_done, A, B);
+    matrix_mult m(clk, rst_n, calc_en, A, B, C, calc_done);
+    output_module o(clk, rst_n, output_en, C, out_data, out_valid, output_done);
+    
+assign uo_out = out_data;
+assign uio_out[0] = out_valid;
+assign uio_out[7:1] = 7'b0;
 
-
+assign uio_oe = 8'b1;
+    wire _unused = &{ena, uio_in[7:1], 1'b0};
 endmodule
