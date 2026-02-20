@@ -66,30 +66,34 @@ begin
     end 
     else if (enable) 
     begin
+        if (k < 2)
+        begin
+            for (int idx = 0; idx < 9; idx = idx + 1) 
+            begin
+               acc[idx] <= acc[idx] + prod[idx];
+            end
+            k <= k + 1;
+            done <= 0;
+        end 
+        else if (k == 2) 
+        begin
+            for (int idx = 0; idx < 9; idx = idx + 1) 
+            begin
+                C[idx] <= acc[idx] + prod[idx];
+                acc[idx] <= 0;  
+            end
+            done <= 1; 
+            k <= 3;
+        end
+    end
+    else
+    begin
         k <= 0;
         done <= 0;
         for (int idx = 0; idx < 9; idx = idx + 1) 
         begin
             acc[idx] <= 0;
-            C[idx]   <= 0;
         end
-    end 
-    if (k < 2) 
-    begin
-        for (int idx = 0; idx < 9; idx = idx + 1)
-        begin
-            acc[idx] <= acc[idx] + prod[idx];
-        end
-        k <= k + 1;
-    end 
-    else if (k == 2) 
-    begin
-        for (int idx = 0; idx < 9; idx = idx + 1) 
-        begin
-            C[idx] <= acc[idx] + prod[idx];
-            acc[idx] <= 0;  
-        end
-        done <= 1;  
     end
 end
 
