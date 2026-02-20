@@ -20,12 +20,15 @@ module tt_um_arraymultiplier (
 assign uio_out = 0;
 assign uio_oe  = 0;
 // List all unused inputs to prevent warnings
-    wire _unused = &{ena, uio_in, 1'b0};
+    wire _unused = &{ena, 1'b0};
 
 parameter INPUT = 2'd0, COMPUTE = 2'd1, OUTPUT = 2'd2, DONE = 2'd3;
 reg [1:0] state, next_state;
 wire input_en, calc_en, output_en;
 wire input_done, calc_done, output_done;
+wire data_valid;
+
+assign data_valid = uio_in[0];
 
     
 always @(*)
@@ -54,7 +57,7 @@ wire [7:0] A [0:8];
 wire [7:0] B [0:8]; 
 wire [17:0] C [0:8];    
 
-input_module(clk, rst_n, ui_in, input_en, done, A, B);
+    input_module(clk, rst_n, ui_in, input_en, data_valid, done, A, B);
 calculation()
 output_module()
 
