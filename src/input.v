@@ -1,7 +1,8 @@
 module input_module(
     input wire        clk,      
     input wire        reset,      
-    input wire [7:0]  data_in,     
+    input wire [7:0]  data_in,  
+    input wire        enable
     input wire        data_valid,
     output reg        done,   
     output reg [7:0]  A [0:8], 
@@ -22,7 +23,7 @@ begin
             B[i] <= 8'd0;
         end
     end 
-    else if (data_valid && !done) 
+    else if (enable && data_valid && !done) 
     begin
         if (count <= 8)
         begin
@@ -45,6 +46,7 @@ begin
 end
 
 endmodule
+
 
 
 
