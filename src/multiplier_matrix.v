@@ -12,6 +12,7 @@ reg [1:0] k;
     wire [7:0] mult_a [0:8];
     wire [7:0] mult_b [0:8];
 wire [15:0] prod [0:8]; 
+reg [17:0] acc [0:8];     
 
     
 mux3_1 a0 (k, A[0], A[1], A[2], mult_a[0]);
@@ -51,30 +52,46 @@ mux3_1 b8 (k, B[2], B[5], B[8], mult_b[8]);
 multiplier u8 (mult_a[8], mult_b[8], prod[8]);
 
 
-always @(posedge clk or negedge rst_n) 
+always @(posedge clk or negedge reset) 
 begin
     if (!reset) 
     begin
         k <= 0;
         done <= 0;
+        for (int idx = 0; idx < 9; idx = idx + 1) 
+        begin
+            acc[idx] <= 0;
+            C[idx]   <= 0;
+        end
     end 
     else if (enable) 
     begin
         k <= 0;
         done <= 0;
+        for (int idx = 0; idx < 9; idx = idx + 1) 
+        begin
+            acc[idx] <= 0;
+            C[idx]   <= 0;
+        end
     end 
     if (k < 2) 
     begin
-
-    k <= k + 1;
+        for (int idx = 0; idx < 9; idx = idx + 1)
+        begin
+            acc[idx] <= acc[idx] + prod[idx];
+        end
+        k <= k + 1;
     end 
     else if (k == 2) 
     begin
-
-    
+        for (int idx = 0; idx < 9; idx = idx + 1) 
+        begin
+            C[idx] <= acc[idx] + prod[idx];
+            acc[idx] <= 0;  
+        end
         done <= 1;  
     end
-    end
+end
 
 endmodule
 
