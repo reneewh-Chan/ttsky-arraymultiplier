@@ -52,17 +52,10 @@ wire [7:0] B [0:8];
 wire [17:0] C [0:8];
 wire [7:0] out_data;
 wire out_valid;
-
     
 assign uo_out = out_data;
 assign uio_out[0] = out_valid;
 assign uio_out[7:1] = 7'b0;
-=======
-assign uo_out = out_data;
-=======
-assign uo_out = out_data;
-=======
-assign uo_out = out_data;
 
 input_module u_input (
     .clk(clk),
@@ -94,24 +87,6 @@ output_module u_output (
     .out_valid(out_valid),
     .done(output_done)
 );
->>>>>>> Stashed changes
-
-input_module u_input (
-    .clk(clk),
-    .reset(rst_n),
-    .data_in(ui_in),
-    .enable(input_en),
-    .data_valid(data_valid),
-    .done(input_done),
-    .A(A),
-    .B(B)
-);
-
-matrix_mult u_matrix_mult (
-    .clk(clk),
-    .reset(rst_n),
-    .enable(calc_en),
-    .A(A),
 
 assign uio_oe = 8'b1;
     wire _unused = &{ena, uio_in[7:1], 1'b0};
