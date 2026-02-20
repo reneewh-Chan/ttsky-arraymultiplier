@@ -16,25 +16,23 @@ module tt_um_arraymultiplier (
     input  wire       rst_n     // reset_n - low to reset
 );
 
-  // All output pins must be assigned. If not used, assign to 0.
-  assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
-  assign uio_out = 0;
-  assign uio_oe  = 0;
+// All output pins must be assigned. If not used, assign to 0.
+assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
+assign uio_out = 0;
+assign uio_oe  = 0;
+// List all unused inputs to prevent warnings
+    wire _unused = &{ena, uio_in, 1'b0};
 
-parameter IDLE = 3'd0, INPUT = 3'd1, COMPUTE = 3'd2, OUTPUT = 3'd3, DONE = 3'd4;
-reg [2:0] state, next_state;
+parameter INPUT = 2'd0, COMPUTE = 2'd1, OUTPUT = 2'd2, DONE = 2'd3;
+reg [1:0] state, next_state;
 wire input_en, calc_en, output_en;
-wire start, input_done, calc_done, output_done;
+wire input_done, calc_done, output_done;
 
-assign uio_oe = 8'b1;
-wire data_valid = uio_in[0];
-assign start = uio_in[1]; 
     
 always @(*)
 begin
     next_state = state;
     case (state)
-            IDLE:    if (start) next_state = INPUT;
             INPUT:   if (input_done) next_state = COMPUTE;
             COMPUTE: if (calc_done) next_state = OUTPUT;
             OUTPUT:  if (output_done) next_state = DONE;
@@ -44,7 +42,7 @@ end
     
 always @(posedge clk or negedge rst_n) 
 begin
-    if (!rst_n) state <= IDLE;
+    if (!rst_n) state <= INPUT;
     else state <= next_state;
 end
 
@@ -57,11 +55,8 @@ wire [7:0] A [0:8];
 wire [7:0] B [0:8]; 
 wire [17:0] C [0:8];    
 
-input_module()
+input_module(clk, rst_n, ui_in, input_en, done, A, B);
 calculation()
 output_module()
-
-// List all unused inputs to prevent warnings
-wire _unused = &{ena, clk, rst_n, 1'b0};
 
 endmodule
