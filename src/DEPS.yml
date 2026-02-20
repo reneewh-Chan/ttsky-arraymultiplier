@@ -1,0 +1,5 @@
+multiplier_test:
+  deps:
+    - multiplier.v
+    - tb_multiplier.sv
+  top: tb_multiplier

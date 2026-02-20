@@ -1,0 +1,23 @@
+{
+  "stdout_truncated": false,
+  "stdout": "INFO: [EDA] eda: version 0.3.10\nINFO: [EDA] main: eda sim --no-color --tool verilator --seed=1 --verilate-args=-Wno-fatal --waves multiplier_test; (run from /app/eda.work/d1124a73-66bc-4cd9-95ca-bb2665890247.edacmd)\nINFO: [EDA] eda_config: --config-yml=eda_config_defaults.yml observed\nINFO: [EDA] eda_config: using config: /app/venv/lib/python3.12/site-packages/opencos/eda_config_defaults.yml\nINFO: [EDA] *** OpenCOS EDA ***\nINFO: [EDA] Detected verilator (/usr/local/bin/verilator)\nINFO: [EDA] sim: top-most target name: multiplier_test\nINFO: [EDA] exec: /usr/local/bin/verilator --binary -Wno-CASEINCOMPLETE -Wno-REALCVT -Wno-SELRANGE -Wno-TIMESCALEMOD -Wno-UNSIGNED -Wno-WIDTH -Wno-fatal --timing --assert --autoflush -sv -CFLAGS -O1 -j 7 --trace-structs --trace-params --trace-fst -top tb_multiplier -o sim.exe +define+SIMULATION /app/eda.work/d1124a73-66bc-4cd9-95ca-bb2665890247.edacmd/multiplier.v /app/eda.work/d1124a73-66bc-4cd9-95ca-bb2665890247.edacmd/tb_multiplier.sv (in eda.work/multiplier_test.sim, tee_fpath='compile.log')\nINFO: [EDA] PID 2487 for /usr/local/bin/verilator\n%Error: /app/eda.work/d1124a73-66bc-4cd9-95ca-bb2665890247.edacmd/multiplier.v:21:9: syntax error, unexpected else\n   21 |         else\n      |         ^~~~\n        ... See the manual at https://verilator.org/verilator_doc.html?v=5.038 for more assistance.\n%Error: /app/eda.work/d1124a73-66bc-4cd9-95ca-bb2665890247.edacmd/multiplier.v:30:13: syntax error, unexpected else\n   30 |             else\n      |             ^~~~\n%Error: Cannot continue\n        ... This fatal error may be caused by the earlier error(s); resolve those first.\nINFO: [EDA] subprocess_run_background: wrote: /app/eda.work/d1124a73-66bc-4cd9-95ca-bb2665890247.edacmd/eda.work/multiplier_test.sim/compile.log\nINFO: [EDA] exec: returned with error (return code: 1)\nINFO: [EDA] Tool - verilator, total counts: 0 tool warnings, 3 tool errors\nERROR: [EDA] sim - verilator - tb_multiplier: exec returned with error code: 1\nINFO: [EDA] Wrote artifacts JSON: eda.work/multiplier_test.sim/artifacts.json\nINFO: [EDA] Exiting with 0 warnings, 1 errors\nINFO: [EDA] Closing logfile: eda.work/eda.log\n",
+  "stdout_size": 2151,
+  "stdout_total_size": 2151,
+  "message": "Simulation failed with return code 255",
+  "warnings": 0,
+  "errors": 0,
+  "stderr": "",
+  "return_code": 255,
+  "start_time": 1771554614.774733,
+  "stop_time": 1771554615.0691986,
+  "waves_returned": false,
+  "wave_file": null,
+  "wave_file_size": null,
+  "verilator_version": null,
+  "system_info": null,
+  "work_dir_files": null,
+  "frogger_status_reason": "Simulation failed with return code 255",
+  "fst_s3_key": null,
+  "fst_s3_bucket": null,
+  "error": "Simulation failed with return code 255"
+}
