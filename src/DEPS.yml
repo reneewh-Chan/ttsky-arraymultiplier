@@ -3,3 +3,9 @@ multiplier_test:
     - multiplier.v
     - tb_multiplier.sv
   top: tb_multiplier
+
+adder_test:
+  deps:
+    - nBit_Adder.v
+    - tb_nBit_Adder.sv
+  top: tb_nBit_Adder

@@ -1,12 +1,14 @@
 module multiplier(clk, reset, A, B, prod);
+
     input clk, reset;
     input [7:0] A, B;
-    output reg [15:0] prod;
+    output [15:0] prod;
 
-    reg [7:0] num;
+    reg [15:0] num;
     reg [7:0] multiplier;
     reg [3:0] count;
-
+    assign prod = A*B;
+/*
     always @(posedge clk, negedge reset)
     begin
         if (!reset)
@@ -38,5 +40,6 @@ module multiplier(clk, reset, A, B, prod);
             end
         end
     end
+*/
 endmodule
 
