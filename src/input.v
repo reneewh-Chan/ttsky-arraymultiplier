@@ -1,4 +1,4 @@
-module input(
+module input_module(
     input wire        clk,      
     input wire        reset,      
     input wire [7:0]  data_in,     
@@ -45,5 +45,6 @@ begin
 end
 
 endmodule
+
 
 
