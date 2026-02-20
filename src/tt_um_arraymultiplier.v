@@ -57,8 +57,8 @@ wire [7:0] A [0:8];
 wire [7:0] B [0:8]; 
 wire [17:0] C [0:8];    
 
-    input_module(clk, rst_n, ui_in, input_en, data_valid, done, A, B);
-calculation()
+    input_module(clk, rst_n, ui_in, input_en, data_valid, input_done, A, B);
+    matrix_mult (clk, rst_n, calc_en, A, B, C, calc_done);
 output_module()
 
 endmodule
