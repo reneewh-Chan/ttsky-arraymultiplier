@@ -1,14 +1,14 @@
 # Tiny Tapeout project information
 project:
-  title:        "Systolic Array Multiplier"      # Project title
-  author:       ""      # Your name
+  title:        "Systolic Matrix Multiplier"      # Project title
+  author:       "Bob For Now"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "A systolic array multiplier leverages parallelism to multiple two matrices."      # One line description of what your project does
+  description:  "A systolic matrix multiplier leverages parallelism to multiple two matrices."      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
-  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+  clock_hz:     66MHz       # Clock frequency in Hz (or 0 if not applicable)
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
-  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+  tiles: "2x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
 
   # Your top module name must start with "tt_um_". Make it unique by including your github username:
   top_module:  "tt_um_arraymultiplier"
@@ -18,32 +18,39 @@ project:
   # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
   source_files:
     - "tt_um_arraymultiplier.v"
+    - "3-to-1_multiplexer.v"
+    - "input.v"
+    - "multiplier_matrix.v"
+    - "multiplier.v"
+    - "nBit_adder.v"
+    - "output.v"
+    - "shiftReg_nbit.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
   # Inputs
-  ui[0]: ""
-  ui[1]: ""
-  ui[2]: ""
-  ui[3]: ""
-  ui[4]: ""
-  ui[5]: ""
-  ui[6]: ""
-  ui[7]: ""
+  ui[0]: "bit 0 of matrix number entry"
+  ui[1]: "bit 1 of matrix number entry"
+  ui[2]: "bit 2 of matrix number entry"
+  ui[3]: "bit 3 of matrix number entry"
+  ui[4]: "bit 4 of matrix number entry"
+  ui[5]: "bit 5 of matrix number entry"
+  ui[6]: "bit 6 of matrix number entry"
+  ui[7]: "bit 7 of matrix number entry"
 
   # Outputs
-  uo[0]: ""
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  uo[0]: "result matrix bit 0"
+  uo[1]: "result matrix bit 1"
+  uo[2]: "result matrix bit 2"
+  uo[3]: "result matrix bit 3"
+  uo[4]: "result matrix bit 4"
+  uo[5]: "result matrix bit 5"
+  uo[6]: "result matrix bit 6"
+  uo[7]: "result matrix bit 7"
 
   # Bidirectional pins
-  uio[0]: ""
+  uio[0]: "valid signal"
   uio[1]: ""
   uio[2]: ""
   uio[3]: ""
