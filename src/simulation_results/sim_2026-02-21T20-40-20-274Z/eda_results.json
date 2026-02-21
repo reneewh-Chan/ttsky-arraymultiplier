@@ -1,0 +1,23 @@
+{
+  "stdout_truncated": false,
+  "stdout": "INFO: [EDA] eda: version 0.3.10\nINFO: [EDA] main: eda sim --no-color --tool verilator --seed=1 --verilate-args=-Wno-fatal --waves tt_um_test; (run from /app/eda.work/bda706ce-7345-4c35-8d2a-59daf2205e2d.edacmd)\nINFO: [EDA] eda_config: --config-yml=eda_config_defaults.yml observed\nINFO: [EDA] eda_config: using config: /app/venv/lib/python3.12/site-packages/opencos/eda_config_defaults.yml\nINFO: [EDA] *** OpenCOS EDA ***\nINFO: [EDA] Detected verilator (/usr/local/bin/verilator)\nWARNING: [EDA] In file ./DEPS.yml, 3-to-1 multiplexer.v should start with a . or underscore/letter, rest should be ., alpha-numeric, dashes, or underscores.\nERROR: [EDA] Trying to resolve target=./3-to-1 multiplexer.v (file?): called from ./DEPS.yml::tt_um_test::line=21, File=3-to-1 multiplexer.v not found in directory=./\nINFO: [EDA] Wrote artifacts JSON: eda.work/artifacts.json\nINFO: [EDA] Exiting with 1 warnings, 1 errors\nINFO: [EDA] Closing logfile: eda.work/eda.log\n",
+  "stdout_size": 954,
+  "stdout_total_size": 954,
+  "message": "Simulation failed with return code 10",
+  "warnings": 0,
+  "errors": 0,
+  "stderr": "",
+  "return_code": 10,
+  "start_time": 1771706420.2000556,
+  "stop_time": 1771706420.393192,
+  "waves_returned": false,
+  "wave_file": null,
+  "wave_file_size": null,
+  "verilator_version": null,
+  "system_info": null,
+  "work_dir_files": null,
+  "frogger_status_reason": "Simulation failed with return code 10",
+  "fst_s3_key": null,
+  "fst_s3_bucket": null,
+  "error": "Simulation failed with return code 10"
+}

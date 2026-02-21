@@ -12,7 +12,7 @@ adder_test:
 
 matrix_mult_test:
   deps:
-    - 3-to-1 multiplexer.v
+    - 3-to-1_multiplexer.v
     - multiplier.v
     - multiplier_matrix.v
     - tb_matrix_mult.sv
@@ -20,7 +20,7 @@ matrix_mult_test:
 
 tt_um_test:
   deps:
-    - 3-to-1 multiplexer.v
+    - 3-to-1_multiplexer.v
     - multiplier.v
     - multiplier_matrix.v
     - input.v
