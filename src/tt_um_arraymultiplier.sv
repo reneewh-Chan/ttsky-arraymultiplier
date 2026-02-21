@@ -47,9 +47,10 @@ assign input_en  = (state == INPUT);
 assign calc_en   = (state == COMPUTE);
 assign output_en = (state == OUTPUT);
 
-wire [7:0] A [0:8];               
-wire [7:0] B [0:8]; 
-wire [17:0] C [0:8];
+// Flattened array signals (individual wires for Yosys compatibility)
+wire [7:0] A0, A1, A2, A3, A4, A5, A6, A7, A8;
+wire [7:0] B0, B1, B2, B3, B4, B5, B6, B7, B8;
+wire [17:0] C0, C1, C2, C3, C4, C5, C6, C7, C8;
 wire [7:0] out_data;
 wire out_valid;
     
@@ -64,17 +65,17 @@ input_module u_input (
     .enable(input_en),
     .data_valid(data_valid),
     .done(input_done),
-    .A(A),
-    .B(B)
+    .A0(A0), .A1(A1), .A2(A2), .A3(A3), .A4(A4), .A5(A5), .A6(A6), .A7(A7), .A8(A8),
+    .B0(B0), .B1(B1), .B2(B2), .B3(B3), .B4(B4), .B5(B5), .B6(B6), .B7(B7), .B8(B8)
 );
 
 matrix_mult u_matrix_mult (
     .clk(clk),
     .reset(rst_n),
     .enable(calc_en),
-    .A(A),
-    .B(B),
-    .C(C),
+    .A0(A0), .A1(A1), .A2(A2), .A3(A3), .A4(A4), .A5(A5), .A6(A6), .A7(A7), .A8(A8),
+    .B0(B0), .B1(B1), .B2(B2), .B3(B3), .B4(B4), .B5(B5), .B6(B6), .B7(B7), .B8(B8),
+    .C0(C0), .C1(C1), .C2(C2), .C3(C3), .C4(C4), .C5(C5), .C6(C6), .C7(C7), .C8(C8),
     .done(calc_done)
 );
 
@@ -82,7 +83,7 @@ output_module u_output (
     .clk(clk),
     .reset(rst_n),
     .enable(output_en),
-    .C(C),
+    .C0(C0), .C1(C1), .C2(C2), .C3(C3), .C4(C4), .C5(C5), .C6(C6), .C7(C7), .C8(C8),
     .out_data(out_data),
     .out_valid(out_valid),
     .done(output_done)
