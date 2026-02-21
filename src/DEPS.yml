@@ -22,9 +22,9 @@ tt_um_test:
   deps:
     - 3-to-1_multiplexer.v
     - multiplier.v
-    - multiplier_matrix.v
-    - input.v
-    - output.v
-    - tt_um_arraymultiplier.v
+    - multiplier_matrix.sv
+    - input.sv
+    - output.sv
+    - tt_um_arraymultiplier.sv
     - tb_tt_um_arraymultiplier.sv
   top: tb_tt_um_arraymultiplier

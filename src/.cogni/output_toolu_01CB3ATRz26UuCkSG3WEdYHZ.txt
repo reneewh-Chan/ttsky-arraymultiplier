@@ -1,0 +1,6 @@
+=== Command: Move-Item input.v input.sv; Move-Item output.v output.sv; Move-Item multiplier_matrix.v multiplier_matrix.sv; Move-Item tt_um_arraymultiplier.v tt_um_arraymultiplier.sv (2026-02-21T21:16:59.852Z) ===
+Exit Code: 0
+Output:
+
+=== End Output ===
+

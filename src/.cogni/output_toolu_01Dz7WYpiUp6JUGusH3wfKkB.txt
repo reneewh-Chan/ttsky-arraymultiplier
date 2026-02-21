@@ -1,0 +1,25 @@
+=== Command: cd src && move input.v input.sv && move output.v output.sv && move multiplier_matrix.v multiplier_matrix.sv && move tt_um_arraymultiplier.v tt_um_arraymultiplier.sv (2026-02-21T21:16:53.652Z) ===
+Exit Code: 1
+Output:
+At line:1 char:8
++ cd src && move input.v input.sv && move output.v output.sv && move mu ...
++        ~~
+The token '&&' is not a valid statement separator in this version.
+At line:1 char:33
++ cd src && move input.v input.sv && move output.v output.sv && move mu ...
++                                 ~~
+The token '&&' is not a valid statement separator in this version.
+At line:1 char:60
++ cd src && move input.v input.sv && move output.v output.sv && move mu ...
++                                                            ~~
+The token '&&' is not a valid statement separator in this version.
+At line:1 char:109
++ ... output.sv && move multiplier_matrix.v multiplier_matrix.sv && move tt ...
++                                                                ~~
+The token '&&' is not a valid statement separator in this version.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : InvalidEndOfLine
+ 
+
+=== End Output ===
+
