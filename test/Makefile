@@ -4,7 +4,7 @@
 # defaults
 SIM ?= icarus
 FST ?= -fst # Use more efficient FST format
-TOPLEVEL_LANG ?= verilog -g2012
+TOPLEVEL_LANG ?= verilog
 SRC_DIR = $(PWD)/../src
 PROJECT_SOURCES = input.v multiplier.v multiplier_matrix.v output.v tt_um_arraymultiplier.v 3-to-1_multiplexer.v
 
@@ -13,7 +13,7 @@ ifneq ($(GATES),yes)
 # RTL simulation:
 SIM_BUILD				= sim_build/rtl
 VERILOG_SOURCES += $(addprefix $(SRC_DIR)/,$(PROJECT_SOURCES))
-
+COMPILE_ARGS 	+= -g2012
 else
 
 # Gate level simulation:
