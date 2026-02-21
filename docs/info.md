@@ -9,12 +9,11 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+The design serially loads matrices A and B, then iteratively computes each matrix entry via a multiply accumulator structure datapath where k indexes the dot product.
 
 ## How to test
 
-Explain how to use your project
+Use provided test benches for the top level module to evaluate main functionality and edge cases. The testbench runs 12 comprehensive tests including normal matrix multiplication with various data patterns (zeros, maximum values, identity matrices, powers of 2), boundary conditions, and robustness checks (reset during operation, data valid glitches, timeout scenarios, and improper input timing).
 
 ## External hardware
-
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+None
